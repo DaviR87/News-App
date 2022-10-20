@@ -1,0 +1,11 @@
+<h2>Prove Component</h2>
+<hr>
+<p>{{ obj | nullable }}</p>
+<p>{{ objFull | nullable | json  }}</p>
+<hr>
+
+<input type="number" [(ngModel)]="proveNumero">
+<div>{{ proveNumero | number:'1.2-2' }}</div>
+<div>{{ proveNumero | percent }}</div>
+<div>{{ proveNumero | currency:'EUR' }}</div>
+<hr>

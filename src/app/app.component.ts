@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'news-app';
+  activePage: string = "home";
+  coloreDelTitolo: string = 'red';
+  availableColors: string[] = ['red', 'blue', 'violet', 'green', 'yellow'];
+
+
+
+  setPage(page: string) {
+    this.activePage = page;
+  }
 }

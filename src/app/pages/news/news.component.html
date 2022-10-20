@@ -1,0 +1,9 @@
+<h2>News Component</h2>
+
+<div *ngFor="let newsItem of news; let odd = odd; let even = even" [ngClass]="{'dispari': odd, 'pari': even}">
+    <app-news-widget *ngIf="!newsItem.important" [news]="newsItem"></app-news-widget>
+</div>
+
+<!-- <app-news-widget [news]="news[0]"></app-news-widget>
+<app-news-widget [news]="news[1]"></app-news-widget>
+<app-news-widget [news]="news[2]"></app-news-widget> -->

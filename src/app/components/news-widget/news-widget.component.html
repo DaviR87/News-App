@@ -1,0 +1,7 @@
+<ng-container *ngIf="news">
+    <h2>{{ news.title | uppercase | lowercase | titlecase }}</h2>
+    <p>{{news.description }}</p>
+    <small>{{news.publishDate | date:'yyyy-MM-dd'}}</small>
+</ng-container>
+<!-- <br>
+<pre>{{ news | json }}</pre> -->

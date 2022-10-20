@@ -1,0 +1,16 @@
+p {
+    cursor: pointer;
+}
+
+p:hover {
+    color: red;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    margin: 10px;
+}
