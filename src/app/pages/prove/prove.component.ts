@@ -11,6 +11,10 @@ export class ProveComponent implements OnInit {
     name: 'esempio'
   }
   proveNumero: number = 0.2;
+
+  coloreDelTitolo: string = 'red';
+  availableColors: string[] = ['red', 'blue', 'violet', 'green', 'yellow'];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,18 +1,19 @@
-<h1 appHighlight [hlColor]="coloreDelTitolo">NEWS DAL MONDO</h1>
-<span>Colore del titolo: </span>
-<select [(ngModel)]="coloreDelTitolo">
-    <option *ngFor="let color of availableColors" [ngValue]="color">{{ color }}</option>
-</select>
+
+
+<h1>NEWS DAL MONDO</h1>
 
 <div class="menu">
     <app-menu (onMenuClick)="setPage($event)"></app-menu>
 </div>
 
+<span>You are {{ isLoggedIn ? '' : ' not ' }} logged in</span>
+
 <ng-container [ngSwitch]="activePage">
     <app-home *ngSwitchCase="'home'"></app-home>
-    <app-news *ngSwitchCase="'news'"></app-news>
+    <app-news *ngSwitchCase="'news'" [isLogged]="isLoggedIn" ></app-news>
     <app-admin *ngSwitchCase="'admin'"></app-admin>
     <app-prove *ngSwitchCase="'prove'"></app-prove>
+    <app-login *ngSwitchCase="'login'" (isLogged)="isLogged($event)" ></app-login>
 </ng-container>
 
 

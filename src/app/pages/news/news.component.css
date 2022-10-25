@@ -5,3 +5,8 @@
 .dispari {
     background-color: rgb(231, 175, 169);
 }
+
+.news-form-container {
+    background-color: coral;
+    padding: 20px;
+}

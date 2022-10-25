@@ -7,10 +7,12 @@ import { ComponentsModule } from './components/components.module';
 import { HomeComponent } from './pages/home/home.component';
 import { NewsComponent } from './pages/news/news.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { NullablePipe } from './nullable.pipe';
 import { ProveComponent } from './pages/prove/prove.component';
+import { LoginComponent } from './pages/login/login.component';
+import { NewsFormComponent } from './pages/news/news-form/news-form.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,16 @@ import { ProveComponent } from './pages/prove/prove.component';
     AdminComponent,
     HighlightDirective,
     NullablePipe,
-    ProveComponent
+    ProveComponent,
+    LoginComponent,
+    NewsFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

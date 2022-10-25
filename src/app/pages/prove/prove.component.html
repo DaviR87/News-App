@@ -1,5 +1,10 @@
 <h2>Prove Component</h2>
 <hr>
+<h1 appHighlight [hlColor]="coloreDelTitolo">NEWS DAL MONDO</h1>
+<span>Colore del titolo: </span>
+<select [(ngModel)]="coloreDelTitolo">
+    <option *ngFor="let color of availableColors" [ngValue]="color">{{ color }}</option>
+</select>
 <p>{{ obj | nullable }}</p>
 <p>{{ objFull | nullable | json  }}</p>
 <hr>
