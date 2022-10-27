@@ -1,5 +1,5 @@
 <h2>News Component</h2>
-
+<button (click)="getNews()">GET NEWS</button>
 <div class="news-form-container">
     <app-news-form (sendNews)="handleNews($event)" *ngIf="isLogged"></app-news-form>
 </div>

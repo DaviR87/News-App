@@ -13,6 +13,7 @@ import { NullablePipe } from './nullable.pipe';
 import { ProveComponent } from './pages/prove/prove.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NewsFormComponent } from './pages/news/news-form/news-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewsFormComponent } from './pages/news/news-form/news-form.component';
     AppRoutingModule,
     FormsModule,
     ComponentsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,21 +1,29 @@
-
-
 <h1>NEWS DAL MONDO</h1>
 
 <div class="menu">
-    <app-menu (onMenuClick)="setPage($event)"></app-menu>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/news" routerLinkActive="active">News</a>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    <a routerLink="/prove" routerLinkActive="active">Prove</a>
+    <a routerLink="/login" routerLinkActive="active">Login</a>
 </div>
 
-<span>You are {{ isLoggedIn ? '' : ' not ' }} logged in</span>
+<!-- <span>You are {{ isLoggedIn ? '' : ' not ' }} logged in</span> -->
 
-<ng-container [ngSwitch]="activePage">
+<!-- <ng-container [ngSwitch]="activePage">
     <app-home *ngSwitchCase="'home'"></app-home>
-    <app-news *ngSwitchCase="'news'" [isLogged]="isLoggedIn" ></app-news>
+    <app-news *ngSwitchCase="'news'"></app-news>
     <app-admin *ngSwitchCase="'admin'"></app-admin>
     <app-prove *ngSwitchCase="'prove'"></app-prove>
-    <app-login *ngSwitchCase="'login'" (isLogged)="isLogged($event)" ></app-login>
-</ng-container>
+    <app-login *ngSwitchCase="'login'"></app-login>
+</ng-container> -->
+<!-- <a routerLink="/home" routerLinkActive="active">Home</a>
+<a routerLink="/news" routerLinkActive="active">News</a>
+<a routerLink="/admin" routerLinkActive="active">Admin</a>
+<a routerLink="/prove" routerLinkActive="active">Prove</a>
+<a routerLink="/login" routerLinkActive="active">Login</a> -->
 
+<router-outlet></router-outlet>
 
 <!-- <app-home *ngIf="activePage === 'home'"></app-home>
 <app-news *ngIf="activePage === 'news'"></app-news>

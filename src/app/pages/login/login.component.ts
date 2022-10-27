@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { LoginService } from 'src/app/login.service';
 
 @Component({
   selector: 'app-login',
@@ -6,21 +7,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  @Output() isLogged: EventEmitter<boolean> = new EventEmitter<boolean>();
-
   user = {
     username: '',
     password: ''
   }
 
-  constructor() { }
+  constructor(private loginSvc: LoginService) { }
 
   ngOnInit(): void {
   }
 
   login() {
     if (this.user.password === '1234') {
-      this.isLogged.emit(true);
+      // this.isLogged.emit(true);
+      this.loginSvc.isLoggedIn = true;
     } else {
       alert('Password errata');
     }

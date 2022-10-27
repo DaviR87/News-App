@@ -14,8 +14,5 @@ export class AppComponent {
     this.activePage = page;
   }
 
-  isLogged(event: boolean) {
-    console.log(event);
-    this.isLoggedIn = event;
-  }
+
 }

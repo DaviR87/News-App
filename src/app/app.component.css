@@ -1,3 +1,12 @@
 .menu {
     background-color: deepskyblue;
+    display: flex;
+    flex-direction: row;
+}
+.menu a {
+    margin: 10px;
+}
+
+.menu a.active {
+    background-color: white;
 }
